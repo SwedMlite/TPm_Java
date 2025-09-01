@@ -1,0 +1,4 @@
+tasks.register('LR2', JavaExec) {
+    mainClass = 'com.swed.LR2.Main'
+    classpath = sourceSets.main.runtimeClasspath
+}
