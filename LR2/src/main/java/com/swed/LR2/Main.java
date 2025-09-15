@@ -21,61 +21,54 @@ public class Main {
         System.out.print("Введіть арифметичний вираз: ");
         String expression = scanner.nextLine().trim();
 
-        try {
-            int num1, num2;
-            String operator = "";
-            int operatorIndex = -1;
+        int num1, num2;
+        String operator = "";
+        int operatorIndex = -1;
 
-            // Шукаємо оператор (починаємо з індексу 1, щоб врахувати від'ємні числа)
-            for (int i = 1; i < expression.length(); i++) {
-                char ch = expression.charAt(i);
-                if (ch == '+' || ch == '-' || ch == '*' || ch == '/') {
-                    operator = String.valueOf(ch);
-                    operatorIndex = i;
-                    break;
-                }
+        // Шукаємо оператор (починаємо з індексу 1, щоб врахувати від'ємні числа)
+        for (int i = 1; i < expression.length(); i++) {
+            char ch = expression.charAt(i);
+            if (ch == '+' || ch == '-' || ch == '*' || ch == '/') {
+                operator = String.valueOf(ch);
+                operatorIndex = i;
+                break;
             }
-
-            if (operatorIndex == -1) {
-                System.out.println("Оператор не знайдено");
-                return;
-            }
-
-            // Витягуємо числа
-            String firstNum = expression.substring(0, operatorIndex).trim();
-            String secondNum = expression.substring(operatorIndex + 1).trim();
-
-            num1 = Integer.parseInt(firstNum);
-            num2 = Integer.parseInt(secondNum);
-
-            int expressionResult = 0;
-            switch (operator) {
-                case "+":
-                    expressionResult = num1 + num2;
-                    break;
-                case "-":
-                    expressionResult = num1 - num2;
-                    break;
-                case "*":
-                    expressionResult = num1 * num2;
-                    break;
-                case "/":
-                    if (num2 == 0) {
-                        System.out.println("Ділення на нуль неможливе");
-                        return;
-                    }
-                    expressionResult = num1 / num2;
-                    break;
-            }
-
-            System.out.println("Результат виразу: " + expressionResult);
-            System.out.println(expressionResult == 0 ? "ТАК" : "НІ");
-
-        } catch (NumberFormatException e) {
-            System.out.println("Помилка в форматі числа");
-        } catch (StringIndexOutOfBoundsException e) {
-            System.out.println("Неправильний формат виразу");
         }
+
+        if (operatorIndex == -1) {
+            System.out.println("Оператор не знайдено");
+            return;
+        }
+
+        // Витягуємо числа
+        String firstNum = expression.substring(0, operatorIndex).trim();
+        String secondNum = expression.substring(operatorIndex + 1).trim();
+
+        num1 = Integer.parseInt(firstNum);
+        num2 = Integer.parseInt(secondNum);
+
+        int expressionResult = 0;
+        switch (operator) {
+            case "+":
+                expressionResult = num1 + num2;
+                break;
+            case "-":
+                expressionResult = num1 - num2;
+                break;
+            case "*":
+                expressionResult = num1 * num2;
+                break;
+            case "/":
+                if (num2 == 0) {
+                    System.out.println("Ділення на нуль неможливе");
+                    return;
+                }
+                expressionResult = num1 / num2;
+                break;
+        }
+
+        System.out.println("Результат виразу: " + expressionResult);
+        System.out.println(expressionResult == 0 ? "ТАК" : "НІ");
 
         // 2.1.
         System.out.println("Введіть дійсні числа (0 для завершення):");
