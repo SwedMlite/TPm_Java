@@ -1,0 +1,5 @@
+tasks.register('LR3', JavaExec) {
+    mainClass = 'com.swed.LR3.Main'
+    classpath = sourceSets.main.runtimeClasspath
+    standardInput = System.in
+}

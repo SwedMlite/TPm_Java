@@ -2,3 +2,4 @@ rootProject.name = 'TPmJava'
 
 include 'LR1'
 include 'LR2'
+include 'LR3'

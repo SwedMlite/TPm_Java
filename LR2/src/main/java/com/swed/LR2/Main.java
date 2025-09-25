@@ -7,7 +7,7 @@ public class Main {
         Scanner scanner = new Scanner(System.in);
 
         // 1.1
-        // x^2-y^2 : -16 -4 , x+y : 4 + 7
+        // x^2-y^2 : -16 4 , x+y : 4 + 7
         System.out.print("Введіть X: ");
         int X = scanner.nextInt();
         System.out.print("Введіть Y: ");
