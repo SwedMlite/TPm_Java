@@ -1,4 +1,4 @@
-package com.swed.LR5;
+package com.swed.LR6;
 
 public class Tree extends Plant {
     private double trunkDiameter;

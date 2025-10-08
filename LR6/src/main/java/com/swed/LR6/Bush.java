@@ -1,4 +1,4 @@
-package com.swed.LR5;
+package com.swed.LR6;
 
 public class Bush extends Plant {
     private int numberOfBranches;
