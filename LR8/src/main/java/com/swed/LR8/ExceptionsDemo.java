@@ -22,6 +22,7 @@ public class ExceptionsDemo {
         System.out.println("— IllegalAccessException (рефлексія до приватного поля):");
         SecretTop s = new SecretTop();
         try {
+
             java.lang.reflect.Field f = SecretTop.class.getDeclaredField("hidden");
 // f.setAccessible(false); // і так false за замовчуванням
             Object v = f.get(s); // тут кинеться IllegalAccessException
