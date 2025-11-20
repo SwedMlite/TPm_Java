@@ -5,11 +5,13 @@
     <option name="linkedExternalProjectsSettings">
       <GradleProjectSettings>
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
-        <option name="gradleHome" value="$PROJECT_DIR$/../../../../Gradle/gradle-8.11" />
         <option name="modules">
           <set>
             <option value="$PROJECT_DIR$" />
             <option value="$PROJECT_DIR$/LR1" />
+            <option value="$PROJECT_DIR$/LR10" />
+            <option value="$PROJECT_DIR$/LR11" />
+            <option value="$PROJECT_DIR$/LR12" />
             <option value="$PROJECT_DIR$/LR2" />
             <option value="$PROJECT_DIR$/LR3" />
             <option value="$PROJECT_DIR$/LR4" />
